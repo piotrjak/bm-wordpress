@@ -4,4 +4,5 @@ RUN apt upgrade -y -qq
 RUN apt install -y -qq php php-mysql
 
 COPY wordpress /wordpress
+WORKDIR /wordpress
 CMD ["php", "-S", "0.0.0.0:80"]
